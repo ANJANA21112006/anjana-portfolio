@@ -59,6 +59,7 @@
             <li>HTML5 & CSS3</li>
             <li>JavaScript</li>
             <li>Bash Scripting</li>
+            <li>Git & GitHub</li>
         </ul>
     </section>
 
@@ -69,14 +70,30 @@
             <input type="email" id="email" placeholder="Your Email" required>
             <textarea id="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
+            <p id="status-message"></p>
         </form>
     </section>
 
     <footer>
         <p>&copy; 2025 ANJANA R | Portfolio</p>
     </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAcdJPbdfdWKarkCBmbB47f06QxE1CxuK8",
+            authDomain: "my-portfolio-c1c81.firebaseapp.com",
+            projectId: "my-portfolio-c1c81",
+            storageBucket: "my-portfolio-c1c81.appspot.com",
+            messagingSenderId: "278658674491",
+            appId: "1:278658674491:web:8e17593e20df2b6c63111e",
+            measurementId: "G-5LBRPW5G27"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore(); // 👈 this line must run before portscript.js
+    </script>
     <script src="portscript.js"></script>
+
 </body>
 
 </html>
